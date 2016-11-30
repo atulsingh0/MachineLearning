@@ -14,17 +14,17 @@ data.head(5)
 # likewise tail
 data.tail(3)
 
-# getting no of rows and columns
-data.num_rows(), data.num_columns() , len(data)
-
-# checking the column names and data type
-sdata.column_types(), sdata.column_names()
-
 # saving the dataset
 data.save('songs')
 
 # loading the dataset
 sdata = gl.load_sframe('songs')
+
+# getting no of rows and columns
+sdata.num_rows(), sdata.num_columns() , len(sdata)
+
+# checking the column names and data type
+sdata.column_types(), sdata.column_names()
 
 # creating a new columns
 sdata['dummy'] = 'Atul'  
