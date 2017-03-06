@@ -6,7 +6,7 @@ importing library
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import Imputer, LabelEncoder, OneHotEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 
 
@@ -36,6 +36,11 @@ y = labelencode_y.fit_transform(y)
 # splitting the data into train test data
 train_X, test_X, train_y, test_y = train_test_split(X, y, test_size=0.2, random_state=0)
 
+
+# standarize the data
+sc = StandardScaler()
+train_X = sc.fit_transform(train_X)
+test_X = sc.transform(test_X)
 
 
 
