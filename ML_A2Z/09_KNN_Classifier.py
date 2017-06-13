@@ -14,7 +14,8 @@ import pandas as pd
 from sklearn.cross_validation import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
+
 
 
 # reading dataset
@@ -37,4 +38,5 @@ clf.fit(train_X, train_y)
 pred_y = clf.predict(test_X)
 
 # confusion prediction
-print(confusion_matrix(test_y, pred_y))
+print("Confusion Metrix:\n", confusion_matrix(test_y, pred_y))
+print("Accuracy Score: ", accuracy_score(test_y, pred_y))
