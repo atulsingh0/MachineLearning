@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri May 26 13:23:12 2017
+Created on Tue Jun 13 09:57:37 2017
 
-# SVM Classifier
+Poly Kernel SVM Classification
+
 
 @author: Atul
 """
@@ -30,7 +31,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 # Implemeting Logistic Reg
-clf = SVC(kernel='linear', random_state=0)
+clf = SVC(kernel='poly', degree=2, random_state=0)
 clf.fit(X_train, y_train)
 
 # predict
