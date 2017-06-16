@@ -31,7 +31,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 # Implemeting Logistic Reg
-clf = SVC(kernel='poly', degree=2, random_state=0)
+clf = SVC(kernel='poly', degree=3, random_state=0)
 clf.fit(X_train, y_train)
 
 # predict
