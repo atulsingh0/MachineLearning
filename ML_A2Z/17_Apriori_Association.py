@@ -22,7 +22,8 @@ for i in range(0, 7501):#range(len(data)):
 clf = apriori(transaction, min_support = 0.003, min_confidence = 0.2, min_lift = 3, min_length = 2)
 
 result = list(clf)
+#print(result)
+print(type(result))
 
-    
-
- 
+for i in result:
+    print(i)
